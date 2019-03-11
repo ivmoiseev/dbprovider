@@ -1,6 +1,8 @@
 {
-    "name": "ilyamoiseev/dbprovider",
+    "name": "ivmoiseev/dbprovider",
     "description": "Simple data provider for MySQL Database. Uses MySQLi or PDO.",
+    "keywords": ["php", "mysql", "mysqli", "pdo"],
+    "license": "GNU General Public License v3.0",
     "type": "library",
     "authors": [
         {

@@ -3,7 +3,7 @@
  *  This file is a part of IM-CMS 4 Content Management System.
  *
  * @since 4.0
- * @author Ilya Moiseev aka Non Grata <ilyamoiseev@inbox.ru>
+ * @author Ilya Moiseev aka Non Grata <ivmoiseev@inbox.ru>
  * @copyright Copyright (c) 2010-2018, Ilya Moiseev
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace ilyamoiseev\dbprovider\Interfaces;
+namespace ivmoiseev\dbprovider\Interfaces;
 
 use mysqli as DB;
 use mysqli_stmt as mysqli_stmt;
@@ -29,7 +29,7 @@ use mysqli_stmt as mysqli_stmt;
  * Class DBMySQLi
  * Warn: Prepared statements will work only with mysqlnd driver!
  * @author Ilya V. Moiseev
- * @package ilyamoiseev\dbprovider
+ * @package ivmoiseev\dbprovider
  * @copyright (c) 2016 - 2019, Ilya V. Moiseev
  */
 class DBMySQLi extends DBGlobal implements DBInterface
