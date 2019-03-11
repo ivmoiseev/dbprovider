@@ -1,0 +1,14 @@
+{
+    "name": "ilyamoiseev/dbprovider",
+    "description": "Simple data provider for MySQL Database. Uses MySQLi or PDO.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ilya Moiseev",
+            "email": "ilyamoiseev@inbox.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    }
+}
