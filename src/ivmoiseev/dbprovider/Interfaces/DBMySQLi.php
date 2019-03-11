@@ -194,4 +194,34 @@ class DBMySQLi extends DBGlobal implements DBInterface
     {
         return $this->last_insert_id;
     }
+
+    /**
+     * Method begins the transaction.
+     * @return bool
+     * @version 11.03.2019
+     */
+    public function transactionBegin(): bool
+    {
+        return $this->db->begin_transaction();
+    }
+
+    /**
+     * Commit current transaction.
+     * @return bool
+     * @version 11.03.2019
+     */
+    public function transactionCommit(): bool
+    {
+        return $this->db->commit();
+    }
+
+    /**
+     * Rollback current transaction.
+     * @return bool
+     * @version 11.03.2019
+     */
+    public function transactionRollback(): bool
+    {
+        return $this->db->rollback();
+    }
 }

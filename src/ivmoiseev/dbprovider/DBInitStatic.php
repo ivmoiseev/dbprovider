@@ -136,4 +136,46 @@ class DBInitStatic
         }
         return self::$db->escaped($value);
     }
+
+    /**
+     * Method begins the transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public static function transactionBegin(): bool
+    {
+        if (!is_object(self::$db)) {
+            throw new DBException("Database is not connected.");
+        }
+        return self::$db->transactionBegin();
+    }
+
+    /**
+     * Rollback current transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public static function transactionRollback(): bool
+    {
+        if (!is_object(self::$db)) {
+            throw new DBException("Database is not connected.");
+        }
+        return self::$db->transactionRollback();
+    }
+
+    /**
+     * Commit current transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public static function transactionCommit(): bool
+    {
+        if (!is_object(self::$db)) {
+            throw new DBException("Database is not connected.");
+        }
+        return self::$db->transactionCommit();
+    }
 }

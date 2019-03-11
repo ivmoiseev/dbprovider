@@ -47,4 +47,10 @@ interface DBInterface
     public function insertID(): int;
 
     public function escaped(string $value): string;
+
+    public function transactionBegin(): bool;
+
+    public function transactionRollback(): bool;
+
+    public function transactionCommit(): bool;
 }

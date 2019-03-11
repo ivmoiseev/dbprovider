@@ -172,4 +172,49 @@ class DBPDO extends DBGlobal implements DBInterface
     {
         return $this->last_insert_id;
     }
+
+    /**
+     * Method begins the transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public function transactionBegin(): bool
+    {
+        try {
+            return $this->db->beginTransaction();
+        } catch (PDOException $e) {
+            throw new DBException($e->getMessage(), $e->getCode());
+        }
+    }
+
+    /**
+     * Commit current transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public function transactionCommit(): bool
+    {
+        try {
+            return $this->db->commit();
+        } catch (PDOException $e) {
+            throw new DBException($e->getMessage(), $e->getCode());
+        }
+    }
+
+    /**
+     * Rollback current transaction.
+     * @return bool
+     * @throws DBException
+     * @version 11.03.2019
+     */
+    public function transactionRollback(): bool
+    {
+        try {
+            return $this->db->rollBack();
+        } catch (PDOException $e) {
+            throw new DBException($e->getMessage(), $e->getCode());
+        }
+    }
 }
