@@ -24,9 +24,9 @@ declare(strict_types=1);
 
 namespace ivmoiseev\dbprovider;
 
-use ilyamoiseev\dbprovider\Interfaces\DBException;
-use ilyamoiseev\dbprovider\Interfaces\DBMySQLi;
-use ilyamoiseev\dbprovider\Interfaces\DBPDO;
+use ivmoiseev\dbprovider\Interfaces\DBException;
+use ivmoiseev\dbprovider\Interfaces\DBMySQLi;
+use ivmoiseev\dbprovider\Interfaces\DBPDO;
 
 /**
  * Class DBInitStatic
